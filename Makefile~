@@ -1,0 +1,12 @@
+
+include ${PETSC_DIR}/lib/petsc/conf/variables
+include ${PETSC_DIR}/lib/petsc/conf/rules
+
+expo_petsc: expo_petsc.o chkopts
+	-${CLINKER} -o expo_petsc expo_petsc.o ${PETSC_LIB} ${MPI_LIB}
+	${RM} expo_petsc.o
+
+vec: vec.o chkopts
+	-${CLINKER} -o vec vec.o ${PETSC_LIB} ${MPI_LIB}
+	${RM} vec.o
+
