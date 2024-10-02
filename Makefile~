@@ -10,3 +10,7 @@ vec: vec.o chkopts
 	-${CLINKER} -o vec vec.o ${PETSC_LIB} ${MPI_LIB}
 	${RM} vec.o
 
+vec1: vec1.o chkopts
+	-${CLINKER} -o vec1 vec1.o ${PETSC_LIB} ${MPI_LIB}
+	${RM} vec1.o
+
